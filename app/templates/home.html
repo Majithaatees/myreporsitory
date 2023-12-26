@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block body %}
+{% if current_user %}
+Logined as {{uname.phone}}{{current_user}}
+<a href="{% url 'logout' %}"><button>Logout</button></a>
+{% else %}
+<a href="{% url 'login' %}"><button>Login</button></a>
+{% endif %}
+{% endblock %}
